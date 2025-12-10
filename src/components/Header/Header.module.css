@@ -1,0 +1,29 @@
+/* .text{
+    font-weight: var(--fwbold);
+} */
+
+ .header_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 368px; same same */
+    gap: 22.196%;
+    background-color: #3F5CC0;
+    padding: 38px 0;
+    /* font-weight: var(--fwmedium); */
+ }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: rgba(9, 8, 8, 0.8);
+}
+.stick{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 38px;
+    transform: rotate(90deg);
+    margin: 0 60px;
+}
