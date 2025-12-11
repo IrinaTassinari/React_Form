@@ -11,6 +11,7 @@
     background-color: #3F5CC0;
     padding: 38px 0;
     /* font-weight: var(--fwmedium); */
+    margin-bottom: 64px;
  }
 .navbar{
     display: flex;

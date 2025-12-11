@@ -1,0 +1,80 @@
+.post_form{
+    background-color: #7D9FFF;
+    max-width: 507px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 124px;
+    border: 1px solid #5ecfff;
+    padding-top: 60px;
+    padding-bottom: 386px;
+    margin-bottom: 102px;
+}
+.post_form_header{
+    font-weight: var( --fwbold);
+    font-size: 36px;
+    color: rgba(9, 8, 8, 0.8);
+}
+.block_form{
+    background-color: rgba(63, 92, 192, 0.8);
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 13px;
+    width: 100%;
+    max-width: 363px;
+}
+.form_and_btn{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-end;
+    justify-content: center;
+}
+.form_form{
+    background-color: rgba(33, 50, 46, 0.13);
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.field_form{
+    display: flex;
+    flex-direction: column;
+}
+.field_form label{
+    font-weight: var( --fwbold);
+    font-size: 10px;
+    color: #1e3479;
+}
+.field_form input,
+.field_form textarea {
+    background-color: transparent;
+    font-weight: var( --fwbold);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.46);
+    border: none;
+}
+.field_form textarea {
+    min-height: 100px; 
+    margin-bottom: 10px;
+}
+.field_form input::placeholder,
+.field_form textarea::placeholder {
+    font-weight: var( --fwbold);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.46);
+}
+.publish_btn{
+    font-weight: var( --fwbold);
+    font-size: 16px;
+    color: rgba(9, 8, 8, 0.8);
+    background-color: rgba(13, 61, 48, 0.4);
+    border: none;
+    padding: 9px 17px;
+}

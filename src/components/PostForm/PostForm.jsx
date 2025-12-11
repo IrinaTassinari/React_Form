@@ -36,7 +36,8 @@ function PostForm(){
             <h2 className={style.post_form_header}>Написать пост</h2>
             <div className={style.block_form}>
                 <img src={user} alt="user" />
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)} className={style.form_and_btn}>
+                <div className={style.form_form}>
                     <div className={style.field_form}>
                         <label htmlFor="title">Заголовок</label>
                         <input type="text" id="title"  placeholder="Заголовок" {...register('title', {required: 'Заголовок обязателен к заполнению'})}/>
@@ -44,10 +45,13 @@ function PostForm(){
                     </div>
                      <div className={style.field_form}>
                         <label htmlFor="text">Текст поста</label>
-                        <textarea id="text" placeholder="Введите текст..."{...register('text', {required: 'Текст поста обязателен к заполнению'})} > </textarea>
+                        <textarea id="text" placeholder="Введите текст..."{...register('text', {required: 'Текст поста обязателен к заполнению'})}></textarea>
                         {errors.text && <p>{errors.text.message}</p>}
                     </div>
-                    <button type="sybmit">Публикация</button>
+                </div>
+
+                   
+                    <button className={style.publish_btn} type="sybmit">Публикация</button>
                 </form>
 
             </div>
