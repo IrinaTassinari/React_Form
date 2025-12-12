@@ -2,9 +2,11 @@ import axios from "axios";
 import style from './PostForm.module.css'
 import { useForm } from "react-hook-form";
 import user from '../../assets/icons/icon-person.svg'
+import { useContext } from "react";
+import PostContext from "../../context/PostContext";
 
 function PostForm(){
-
+    const {createPost} = useContext(PostContext)
     const {register, handleSubmit, formState:{errors}, reset} = useForm()
 
     const onSubmit = async (data) =>{
@@ -21,8 +23,9 @@ function PostForm(){
         // ) same same
 
         try{
-            const result = await axios.post('https://693931fcc8d59937aa06d257.mockapi.io/posts', post)
-            console.log('Пост успешно создан', result.data)
+            await createPost(post)
+            // const result = await axios.post('https://693931fcc8d59937aa06d257.mockapi.io/posts', post)
+            // console.log('Пост успешно создан', result.data)
             reset()
             //метод который очищает форму
         }

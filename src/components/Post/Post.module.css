@@ -1,16 +1,23 @@
 .single_post_container{
 background-color: #3F5CC0;
 border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 
 }
 .icon_div{
-
+    display: flex;
+    align-items: center;
+    gap: 11px;
 }
 .icon_div img{
 
 }
 .icon_div p{
-
+    font-weight: var( --fwbold);
+    font-size: 16px;
+    color: rgba(9, 8, 8, 0.8);
 }
 .div_txt_middle{
 

@@ -6,9 +6,9 @@ import axios from 'axios'
 function PostList(){
     // useState, useEffect
 
-    const [allPosts, setAllPosts] = useState([]) //храним все посты загружен с сервера
+    //const [allPosts, setAllPosts] = useState([]) //храним все посты загружен с сервера
     const [currentPosts, setCurrentPosts] = useState([]) //состояние для хранения текущих постов, которые отображаются на странице
-    const [loading, setLoading] = useState(true) //состояние для отслеживания состояния загрузки данных // useState(true) загрузка идет только в момент оьправки сетевого запроса
+    //const [loading, setLoading] = useState(true) //состояние для отслеживания состояния загрузки данных // useState(true) загрузка идет только в момент оьправки сетевого запроса
     const [error, setError] = useState(null) // состояние для отслеживания ошибок при загрузке данных
     const [page, setPage] = useState(1) // состояние для отслеживания текущей страницы (пагинация)
 

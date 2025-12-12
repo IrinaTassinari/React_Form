@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import PostForm from './components/PostForm/PostForm'
 import PostList from './components/PostList/PostList'
+import ProviderPosts from './provider/ProviderPosts'
 
 function App() {
  
@@ -11,8 +12,11 @@ function App() {
     <>
       <Header/>
       <div className='postList_postForm'>
-        <PostList/>
-        <PostForm/>
+        <ProviderPosts>
+          <PostList/>
+          <PostForm/>
+        </ProviderPosts>
+       
       </div>
     </>
   )
