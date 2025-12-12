@@ -9,3 +9,6 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--fwbold);
 }
+body{
+    background-color: #60e4eb;
+}

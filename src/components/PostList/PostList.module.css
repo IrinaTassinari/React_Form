@@ -1,0 +1,21 @@
+.container_post_list{
+    background-color: #7d9fff;
+    border: 1px solid #5ecfff;
+    max-width: 1043px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 114px 50px 114px;
+}
+.posts_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+.container_post_list h2{
+    font-weight: var( --fwbold);
+    font-size: 36px;
+    color: rgba(9, 8, 8, 0.8);
+    text-align: center;
+    padding-bottom: 92px;
+}

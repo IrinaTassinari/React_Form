@@ -31,19 +31,56 @@ function PostList(){
 
     useEffect( () =>  {fetchPosts()}, [])
 
+    //!!!!стандартная логика пагинации!!!!
     const loadMorePosts = () => {
         const nextPage = page +1
-        const startIndex = (nextPage - 1) * 3 
-        const endIndex = startIndex + 3 
+        const startIndex = (nextPage - 1) * 3 //??
+        const endIndex = startIndex + 3 //??
         //берем посты с startIndex по endIndex
         const nextPosts = allPosts.slice(startIndex, endIndex)
         setCurrentPosts(nextPosts)
         setPage(nextPage)
     }
 
+    const handleDelete = async(idPost) => {
+        try{
+            await axios.delete(`https://693931fcc8d59937aa06d257.mockapi.io/posts/${idPost}`)
+            const updateAllPosts = allPosts.filter((post) => post.id !== idPost)//deleted
+            //post - object from [] array.allPosts
+            setAllPosts(updateAllPosts)
+
+            //!!!!стандартная логика пагинации!!!!
+            const startIndex = (page - 1) * 3 // just math
+            const endIndex = page * 3 // math
+            setCurrentPosts(updateAllPosts.slice(startIndex, endIndex)) // same same  = slice(0,3)
+        }
+        catch(error){
+            setError(error.message)
+           console.error('There is some error')
+        }
+    }
+
+    if(loading)  { 
+        return <p className={style.p_loading}>Loading posts...</p>
+    }
+    if(error) {
+        return <p className={style.p_error_loading}>{error.message}</p>
+    }
+    
+
     return(
-        <div>
-            <Post/>
+        <div className={style.container_post_list}>
+            <div className={style.posts_box}>
+                <h2>Список постов</h2>
+                {currentPosts.map((post) => (
+                 <Post key = {post.id}  handleDelete = {handleDelete} post = {post}/>
+            ))}
+            </div>
+            
+            <button onClick={loadMorePosts} disabled = {currentPosts.length < 3}>Далее</button>
+            {/* currentPosts мы получили отсюда: setCurrentPosts(updateAllPosts.slice(startIndex, endIndex)) 
+            map.post - один из трех объектов */}
+           
         </div>
     )
 }

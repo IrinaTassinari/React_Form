@@ -10,8 +10,10 @@ function App() {
   return (
     <>
       <Header/>
-      <PostForm/>
-      <PostList/>
+      <div className='postList_postForm'>
+        <PostList/>
+        <PostForm/>
+      </div>
     </>
   )
 }

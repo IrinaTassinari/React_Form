@@ -1,0 +1,7 @@
+.postList_postForm{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 110px;
+  
+}
