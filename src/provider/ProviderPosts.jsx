@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import PostContext from "../context/PostContext"
+import axios from "axios"
 
-function ProviderPosts(){
+function ProviderPosts({children}){
     const [allPosts, setAllPosts] = useState([]) //храним все посты загружен с сервера
     const [loading, setLoading] = useState(true) //состояние для отслеживания состояния загрузки данных // useState(true) загрузка идет только в момент оьправки сетевого запроса
 

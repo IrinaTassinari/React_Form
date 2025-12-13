@@ -12,9 +12,17 @@ function App() {
     <>
       <Header/>
       <div className='postList_postForm'>
-        <ProviderPosts>
+         {/* Оборачиваем компоненты в ProviderPosts,
+          чтобы PostList и PostForm имели доступ к глобальному состоянию постов */}
+        <ProviderPosts> 
+          
+          {/* Компонент списка постов.
+            Он читает глобальные посты из контекста и отображает их */}
           <PostList/>
+          {/* Компонент формы создания поста.
+            Он вызывает createPost() из контекста и автоматически обновляет список */}
           <PostForm/>
+
         </ProviderPosts>
        
       </div>
